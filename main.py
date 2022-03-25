@@ -81,8 +81,6 @@ while True:
         int(roll * 100), # Roll in degrees in the range -180 to 180
         int(pitch * 100), # Pitch in degrees in the range -90 to 90
         int(voltage * 100)) # Battery voltage
-    #payload = struct.pack(">ff", temperature,humidity)
-    #s.send(payload)
     s.send(clean_bytes)
     print("Bytes sent, sleeping for 10 secs")
     time.sleep(10)
